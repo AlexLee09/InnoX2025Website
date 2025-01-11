@@ -1,41 +1,87 @@
 export const navLinks = [
     {
         name: "Home",
-        route: "/"
+        slug: "/",
+        isComp: false
     },
     {
         name: "Mathematics",
-        route: "/math"
+        slug: "/math",
+        isComp: true
     },
     {
         name: "Technology",
-        route: "/tech"
+        slug: "/tech",
+        isComp: true
     },
     {
         name: "Economics",
-        route: "/economics"
+        slug: "/economics",
+        isComp: true
     },
     {
         name: "About Us",
-        route: "/aboutus"
+        slug: "/aboutus",
+        isComp: false
+    }, 
+    {
+        name: "Contact",
+        slug: "/contact",
+        isComp: false
     }
 ];
 
 export const competitionInfo = [
     {
+        name: "math",
         title: "InnovationMath",
         content: "Here is a resource package and look at the rubric",
-        formLink: "",
+        links: [
+            {
+                text: "this sample test",
+                url: ""
+            },
+            {
+                text: "Here",
+                url: ""
+            }
+
+        ],
+        signupFormLink: "",
 
     },
     {
+        name: "tech",
         title: "InnovationTech",
-        content: "",
-        formLink: ""
+        content: "aisduiosadia",
+        links: [
+            {
+                text: "this rubric",
+                url: ""
+            },
+            {
+                text: "resource package",
+                url: ""
+            }
+
+        ],
+        signupFormLink: ""
     },
     {
-        title: "InnovatioEcons",
+        name: "economics",
+        title: "InnovationEcons",
         content: "resoruce package",
-        formLink: ""
+        links: [
+            {
+                text: "rubric",
+                url: ""
+            },
+            {
+                text: "resource package for guidance",
+                url: ""
+            }
+
+        ],
+        signupFormLink: ""
     }
 ]
