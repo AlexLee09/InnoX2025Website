@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import "./globals.css";
 import * as React from "react";
 import {NextUIProvider} from "@nextui-org/system";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -32,11 +33,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
         <body className={inter.variable}>
-          <NextUIProvider>
-            {children}
-          </NextUIProvider>
+              <NextUIProvider>
+                <ThemeProvider
+                  attribute="class"
+                  defaultTheme="dark"
+                  enableSystem
+                  disableTransitionOnChange>
+                  {children}
+                </ThemeProvider>
+              </NextUIProvider>
+
         </body>
     </html>
   );

@@ -1,9 +1,5 @@
 export const navLinks = [
-    {
-        name: "Home",
-        slug: "/",
-        isComp: false
-    },
+
     {
         name: "Mathematics",
         slug: "/math",
